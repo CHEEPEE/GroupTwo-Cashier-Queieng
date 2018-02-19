@@ -8,6 +8,38 @@
     messagingSenderId: "654094023765"
   };
   firebase.initializeApp(config);
+
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // User is signed in.
+        window.alert(localStorage.cashiernumber);
+      var user = firebase.auth().currentUser;
+    //  var userId = user.uid;
+      var cashierNumber;
+
+      if(user != null){
+        var userId = firebase.auth().currentUser.uid;
+        return firebase.database().ref('/user/' + userId+'/cashier_number').once('value').then(function(snapshot) {
+        localStorage.cashiernumber = snapshot.val();
+
+        });
+
+        var email_id = user.email;
+
+        // if (window.location.href != "http://localhost:5000/index.html" || window.location.href != "http://localhost:5000/index.html" ) {
+        //     window.location.href = "index.html";
+        // }
+      }
+    } else {
+      // No user is signed in.
+        window.location.href = "login.html";
+        window.alert(localStorage.cashiernumber);
+    }
+
+  });
+  function logout(){
+    firebase.auth().signOut();
+  }
 var showCashierNumber1 = document.getElementById('cashier-number1');
 var showCashierNumber2 = document.getElementById('cashier-number2');
 var showCashierNumber3 = document.getElementById('cashier-number3');
@@ -58,28 +90,14 @@ getCashierNumber3();
 function addCashsierNumber(){
   return firebase.database().ref('cashiernumber/cashierNnumber').once('value').then(function(data) {
       var getData= data.val()+1;
-      writeCashierNumber(getData);
+      writeCashierNumber(getData,localStorage.cashiernumber);
 
   });
 }
 function addCashsierNumber1(){
   return firebase.database().ref('cashiernumber/cashierNnumber').once('value').then(function(data) {
       var getData= data.val()+1;
-      writeCashierNumber(getData,1);
-
-  });
-}
-function addCashsierNumber2(){
-  return firebase.database().ref('cashiernumber/cashierNnumber').once('value').then(function(data) {
-      var getData= data.val()+1;
-      writeCashierNumber(getData,2);
-
-  });
-}
-function addCashsierNumber3(){
-  return firebase.database().ref('cashiernumber/cashierNnumber').once('value').then(function(data) {
-      var getData= data.val()+1;
-      writeCashierNumber(getData,3);
+      writeCashierNumber(getData,localStorage.cashiernumber);
 
   });
 }
@@ -96,17 +114,9 @@ document.addEventListener("keydown", function(event) {
     addCashsierNumber();
   }
   else if (event.which==49) {
-      addCashsierNumber1();
+      addCashsierNumber();
   }
-  else if (event.which==50) {
-      addCashsierNumber2();
-  }
-  else if (event.which==51) {
-      addCashsierNumber3();
-  }
-  else if (event.which==48) {
-    resetCashiernumber();
-  }
+
 
 
 });

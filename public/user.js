@@ -3,25 +3,33 @@
     if (user) {
       // User is signed in.
       var user = firebase.auth().currentUser;
+    //  var userId = user.uid;
+      var cashierNumber;
 
       if(user != null){
 
+
+        var userId = firebase.auth().currentUser.uid;
+        return firebase.database().ref('/user/' + userId+'/cashier_number').once('value').then(function(snapshot) {
+
+        localStorage.cashiernumber = snapshot.val();
+        window.location.href = "index.html";
+        });
+
         var email_id = user.email;
-        if (  window.location.href != "http://localhost:5000/index.html") {
-            window.location.href = "index.html";
-        }
-      }
+        // if (window.location.href != "http://localhost:5000/index.html" || window.location.href != "http://localhost:5000/index.html" ) {
+        //     window.location.href = "index.html";
+        // }
+
 
     } else {
       // No user is signed in.
       if (window.location.href != "http://localhost:5000/login.html") {
         window.location.href = "login.html";
       }
-
-
     }
+  }
   });
-
 
 function login(){
 
