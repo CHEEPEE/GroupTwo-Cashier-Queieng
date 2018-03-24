@@ -13,6 +13,7 @@
     if (user) {
       // User is signed in.
         window.alert(localStorage.cashiernumber);
+        window.alert("Current Date: "+ getCurrentDate()+" ");
       var user = firebase.auth().currentUser;
     //  var userId = user.uid;
       var cashierNumber;
@@ -34,6 +35,7 @@
       // No user is signed in.
         window.location.href = "login.html";
         window.alert(localStorage.cashiernumber);
+
     }
 
   });
@@ -43,6 +45,10 @@
 var showCashierNumber1 = document.getElementById('cashier-number1');
 var showCashierNumber2 = document.getElementById('cashier-number2');
 var showCashierNumber3 = document.getElementById('cashier-number3');
+var currentQueueNumber = document.getElementById('queue-number');
+var currentStudentNumber = document.getElementById('student-number');
+var currentTotalTransactionCost = document.getElementById('total-transaction-cost');
+
 var database = firebase.database();
 
 function writeCashierNumber(number,cashier) {
@@ -83,14 +89,23 @@ function getCashierNumber3(){
       showCashierNumber3.innerHTML = data.val();
   });
 }
+function putValueTourentQueueNumber(){
+  return firebase.database().ref('cashiernumber/cashierNnumber').once('value').then(function(data) {
+    currentQueueNumber.innerHTML = data.val();
+    setStudentNumber(data.val());
+    setStudentTotalTransaction(data.val());
+  });
+}
 getCashierNumber1();
 getCashierNumber2();
 getCashierNumber3();
+putValueTourentQueueNumber();
 
 function addCashsierNumber(){
   return firebase.database().ref('cashiernumber/cashierNnumber').once('value').then(function(data) {
       var getData= data.val()+1;
       writeCashierNumber(getData,localStorage.cashiernumber);
+        putValueTourentQueueNumber();
 
   });
 }
@@ -112,11 +127,49 @@ function resetCashiernumber(){
 document.addEventListener("keydown", function(event) {
   if (event.which==13) {
     addCashsierNumber();
+
   }
   else if (event.which==49) {
       addCashsierNumber();
   }
-
-
-
 });
+
+function getCurrentDate(){
+  var d = new Date();
+ return ("0" + (d.getMonth() + 1)).slice(-2)+""+d.getDate()+""+d.getFullYear();
+}
+console.log(getCurrentDate());
+
+function setStudentNumber(que){
+  firebase.database().ref('transactions/'+getCurrentDate()+"/"+que+"/"+"studentNumber")
+                  .on("value", function(snapshot) {
+      console.log(snapshot.val());
+      currentStudentNumber.innerHTML = snapshot.val();
+
+      // snapshot.forEach(function(data) {
+      //     console.log(data.val());
+      // });
+  });
+
+}
+firebase.database().ref('transactions/'+getCurrentDate()+"/"+"5"+"/"+"studentNumber")
+                .on("value", function(snapshot) {
+    console.log(snapshot.val());
+    currentStudentNumber.innerHTML = snapshot.val();
+
+    // snapshot.forEach(function(data) {
+    //     console.log(data.val());
+    // });
+});
+function setStudentTotalTransaction(que){
+  firebase.database().ref('transactions/'+getCurrentDate()+"/"+que+"/"+"totalCost")
+                  .on("value", function(snapshot) {
+      console.log(snapshot.val());
+      currentTotalTransactionCost.innerHTML = snapshot.val();
+
+      // snapshot.forEach(function(data) {
+      //     console.log(data.val());
+      // });
+  });
+
+}

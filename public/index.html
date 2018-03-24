@@ -28,32 +28,61 @@
 <div class="ui horizontal divider"></div>
   <div class="native-margin centered">
     <div class="ui grid segment">
-      <div class="three column row">
-         <div class="column">
-           <h1 class="ui header">Window 1</h1>
-            <div class="ui clearing divider"></div>
-           <p id="cashier-number1" class="cashier-number">
-           </p>
-         </div>
-         <div class="column">
-           <h1 class="ui header">Window 2</h1>
-            <div class="ui clearing divider"></div>
-           <p id="cashier-number2" class="cashier-number">0
-           </p>
-         </div>
-         <div class="column">
-           <h1 class="ui header">Window 3</h1>
-            <div class="ui clearing divider"></div>
-           <p id="cashier-number3" class="cashier-number">0
-           </p>
-         </div>
-       </div>
+      <div class="two column row">
+        <div class="column">
+
+          <div class="three column row">
+             <div class="column">
+               <h3 class="ui header">Student Number</h3>
+                <div class="ui clearing divider"></div>
+               <p id="student-number" class="cashier-number">0
+               </p>
+             </div>
+             <div class="column">
+               <h3 class="ui header">Total Transaction Cost</h3>
+                <div class="ui clearing divider"></div>
+               <p id="total-transaction-cost" class="cashier-number">0
+               </p>
+             </div>
+             <div class="column">
+               <h3 class="ui header">Queue Number</h3>
+                <div class="ui clearing divider"></div>
+               <p id="queue-number" class="cashier-number">0
+               </p>
+             </div>
+           </div>
+
+        </div>
+        <div class="column">
+
+          <div class="three column row">
+             <div class="column">
+               <h3 class="ui header">Window 1</h3>
+                <div class="ui clearing divider"></div>
+               <p id="cashier-number1" class="cashier-number">
+               </p>
+             </div>
+             <div class="column">
+               <h3 class="ui header">Window 2</h3>
+                <div class="ui clearing divider"></div>
+               <p id="cashier-number2" class="cashier-number">0
+               </p>
+             </div>
+             <div class="column">
+               <h3 class="ui header">Window 3</h3>
+                <div class="ui clearing divider"></div>
+               <p id="cashier-number3" class="cashier-number">0
+               </p>
+             </div>
+           </div>
+
+        </div>
+      </div>
+
       </div>
     </div>
     <button class="ui button" onclick="logout()">Log Out</button>
     <button class="ui button" onclick="resetCashiernumber()">Reset Number</button>
-
-
     <!-- firebase initialize -->
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
   <script src="index.js"></script>
