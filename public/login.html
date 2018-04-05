@@ -10,30 +10,57 @@
 
 
     </script>
+    <style media="screen">
+      .maroon{
+        background-color: #B1252B;
+      }
+      body{
+        background-image: url("images/sac-bg.png");
+
+        background-size: cover;
+      }
+    </style>
     <meta charset="utf-8">
     <title></title>
   </head>
-  <body class="customlogin">
-    <div class="ui centered grid">
-        <div class="six wide tablet four wide computer column">
-          <div class="ui left icon input">
-            <input id ="email_field" placeholder="Username" type="text">
-            <i class="user icon"></i>
+  <body>
+    <div class="ui grid" style="margin:0 !important">
+        <div class="sixteen wide column maroon">
+          <div class="grid ui">
+            <img class="sac-logo" src="images/log0.png" alt="sac-logo">
           </div>
-          <br>
-          <br>
-          <div class="ui left icon input">
-            <input id ="password_field" placeholder="Password" type="password">
-            <i class="lock icon"></i>
-          </div>
-            <br>
-            <br>
-            <div class="ui">
-              <button class="ui button" onclick="login()">Log In</button>
-            </div>
-
         </div>
     </div>
+    <div class="loginform">
+      <div class="ui cards">
+        <div class="card">
+          <div class="content">
+            <div class="header">Login</div>
+            <div class="meta"></div>
+            <div class="description">
+              <div class="eight wide tablet four wide computer column">
+                <div class="ui left icon input ">
+                  <input class="centered" id ="email_field" placeholder="Username" type="text">
+                  <i class="user icon"></i>
+                </div>
+                <br>
+                <br>
+                <div class="ui left icon input">
+                  <input id ="password_field" placeholder="Password" type="password">
+                  <i class="lock icon"></i>
+                </div>
+                  <br>
+                  <br>
+                  <div class="ui">
+                    <button class="ui button" onclick="login()">Log In</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
   </body>
   <!-- firebase initialize -->

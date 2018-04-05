@@ -1,0 +1,41 @@
+[debug] [2018-04-05T02:39:57.579Z] ----------------------------------------------------------------------
+[debug] [2018-04-05T02:39:57.584Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Keji's Lab\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-04-05T02:39:57.585Z] CLI Version:   3.16.0
+[debug] [2018-04-05T02:39:57.585Z] Platform:      win32
+[debug] [2018-04-05T02:39:57.585Z] Node Version:  v6.10.3
+[debug] [2018-04-05T02:39:57.585Z] Time:          Thu Apr 05 2018 10:39:57 GMT+0800 (Malay Peninsula Standard Time)
+[debug] [2018-04-05T02:39:57.585Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-04-05T02:39:57.605Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-04-05T02:39:57.605Z] > authorizing via signed-in user
+[debug] [2018-04-05T02:39:57.607Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-04-05T02:39:57.607Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/wwGVO5OngVStb0oULoqdr4ODxrcuAzM9D8qVFB7-xno',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Thu Apr 05 2018 10:39:57 GMT+0800 (Malay Peninsula Standard Time)
+[debug] [2018-04-05T02:39:58.494Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-05T02:39:58.546Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/cashier-queing-system  
+  
+ Thu Apr 05 2018 10:39:58 GMT+0800 (Malay Peninsula Standard Time)
+[debug] [2018-04-05T02:39:59.951Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-05T02:39:59.952Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/cashier-queing-system/tokens  
+  
+ Thu Apr 05 2018 10:39:59 GMT+0800 (Malay Peninsula Standard Time)
+[debug] [2018-04-05T02:40:01.211Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Keji's Lab\git GroupTwo'...
+[info] 
+[debug] [2018-04-05T02:40:01.217Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/cashier-queing-system  
+  
+ Thu Apr 05 2018 10:40:01 GMT+0800 (Malay Peninsula Standard Time)
+[debug] [2018-04-05T02:40:03.293Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-05T02:40:03.294Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/654094023765/clients/_:getWebAppConfig  
+  
+ Thu Apr 05 2018 10:40:03 GMT+0800 (Malay Peninsula Standard Time)
+[debug] [2018-04-05T02:40:14.534Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+

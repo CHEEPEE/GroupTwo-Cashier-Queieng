@@ -27,13 +27,10 @@
 
         var email_id = user.email;
 
-        // if (window.location.href != "http://localhost:5000/index.html" || window.location.href != "http://localhost:5000/index.html" ) {
-        //     window.location.href = "index.html";
-        // }
       }
     } else {
       // No user is signed in.
-        window.location.href = "login.html";
+        window.location.href = "signin/";
         window.alert(localStorage.cashiernumber);
 
     }
@@ -47,6 +44,7 @@ var showCashierNumber2 = document.getElementById('cashier-number2');
 var showCashierNumber3 = document.getElementById('cashier-number3');
 var currentQueueNumber = document.getElementById('queue-number');
 var currentStudentNumber = document.getElementById('student-number');
+var currentStudentName = document.getElementById('student-name');
 var currentTotalTransactionCost = document.getElementById('total-transaction-cost');
 
 var database = firebase.database();
@@ -136,7 +134,7 @@ document.addEventListener("keydown", function(event) {
 
 function getCurrentDate(){
   var d = new Date();
- return ("0" + (d.getMonth() + 1)).slice(-2)+""+d.getDate()+""+d.getFullYear();
+ return ("0" + (d.getMonth() + 1)).slice(-2)+""+("0" + (d.getDate())).slice(-2)+""+d.getFullYear();
 }
 console.log(getCurrentDate());
 
@@ -145,6 +143,7 @@ function setStudentNumber(que){
                   .on("value", function(snapshot) {
       console.log(snapshot.val());
       currentStudentNumber.innerHTML = snapshot.val();
+      setStudentName(snapshot.val());
 
       // snapshot.forEach(function(data) {
       //     console.log(data.val());
@@ -161,6 +160,18 @@ firebase.database().ref('transactions/'+getCurrentDate()+"/"+"5"+"/"+"studentNum
     //     console.log(data.val());
     // });
 });
+
+function setStudentName(studentNumber){
+  firebase.database().ref('students/'+studentNumber+"/"+"studentName")
+                  .on("value", function(snapshot) {
+      console.log(snapshot.val());
+      currentStudentName.innerHTML = snapshot.val();
+
+      // snapshot.forEach(function(data) {
+      //     console.log(data.val());
+      // });
+  });
+}
 function setStudentTotalTransaction(que){
   firebase.database().ref('transactions/'+getCurrentDate()+"/"+que+"/"+"totalCost")
                   .on("value", function(snapshot) {

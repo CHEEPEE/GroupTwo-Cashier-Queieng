@@ -1,6 +1,8 @@
 .native-margin{
 
-  margin: 50px;
+  margin: 20px;
+}
+.native-padding{
   padding: 50px;
 }
 .cashier-number{
@@ -12,4 +14,16 @@ font-size:5em;
 }
 .customlogin{
   padding-top: 5%;
+}
+
+.sac-logo{
+  width: 80px;
+  height: 50px;
+  margin: 10px;
+}
+.loginform{
+margin: 100px;
+}
+.maroon{
+  background-color: #B1252B;
 }
