@@ -21,7 +21,7 @@
       if(user != null){
         var userId = firebase.auth().currentUser.uid;
         return firebase.database().ref('/user/' + userId+'/cashier_number').once('value').then(function(snapshot) {
-        localStorage.cashiernumber = snapshot.val();
+       
 
         });
 
@@ -31,7 +31,7 @@
     } else {
       // No user is signed in.
         window.location.href = "signin/";
-        window.alert(localStorage.cashiernumber);
+      
 
     }
 

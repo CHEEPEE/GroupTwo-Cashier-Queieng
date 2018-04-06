@@ -1,92 +1,26 @@
-[debug] [2018-04-04T15:22:47.763Z] ----------------------------------------------------------------------
-[debug] [2018-04-04T15:22:47.765Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Keji's Lab\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] [2018-04-04T15:22:47.766Z] CLI Version:   3.16.0
-[debug] [2018-04-04T15:22:47.766Z] Platform:      win32
-[debug] [2018-04-04T15:22:47.766Z] Node Version:  v6.10.3
-[debug] [2018-04-04T15:22:47.766Z] Time:          Wed Apr 04 2018 23:22:47 GMT+0800 (Malay Peninsula Standard Time)
-[debug] [2018-04-04T15:22:47.766Z] ----------------------------------------------------------------------
+[debug] [2018-04-06T05:26:17.848Z] ----------------------------------------------------------------------
+[debug] [2018-04-06T05:26:17.851Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Keji's Lab\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2018-04-06T05:26:17.851Z] CLI Version:   3.16.0
+[debug] [2018-04-06T05:26:17.851Z] Platform:      win32
+[debug] [2018-04-06T05:26:17.851Z] Node Version:  v6.10.3
+[debug] [2018-04-06T05:26:17.852Z] Time:          Fri Apr 06 2018 13:26:17 GMT+0800 (Malay Peninsula Standard Time)
+[debug] [2018-04-06T05:26:17.852Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-04-04T15:22:47.786Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-04-04T15:22:47.788Z] > authorizing via signed-in user
-[debug] [2018-04-04T15:22:47.790Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2018-04-04T15:22:47.791Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- { refresh_token: '1/wwGVO5OngVStb0oULoqdr4ODxrcuAzM9D8qVFB7-xno',
-  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
-  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
-  grant_type: 'refresh_token',
-  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
- Wed Apr 04 2018 23:22:47 GMT+0800 (Malay Peninsula Standard Time)
-[debug] [2018-04-04T15:22:49.980Z] <<< HTTP RESPONSE 200
-[debug] [2018-04-04T15:22:50.057Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/cashier-queing-system  
+[debug] [2018-04-06T05:26:17.868Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-04-06T05:26:17.870Z] > authorizing via signed-in user
+[debug] [2018-04-06T05:26:17.872Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/cashier-queing-system  
   
- Wed Apr 04 2018 23:22:50 GMT+0800 (Malay Peninsula Standard Time)
-[debug] [2018-04-04T15:22:55.461Z] <<< HTTP RESPONSE 200
-[debug] [2018-04-04T15:22:55.462Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/cashier-queing-system/tokens  
+ Fri Apr 06 2018 13:26:17 GMT+0800 (Malay Peninsula Standard Time)
+[debug] [2018-04-06T05:26:20.327Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-06T05:26:20.328Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/cashier-queing-system/tokens  
   
- Wed Apr 04 2018 23:22:55 GMT+0800 (Malay Peninsula Standard Time)
-[debug] [2018-04-04T15:22:59.159Z] <<< HTTP RESPONSE 200
+ Fri Apr 06 2018 13:26:20 GMT+0800 (Malay Peninsula Standard Time)
+[debug] [2018-04-06T05:26:21.445Z] <<< HTTP RESPONSE 200
 [info] 
-[info] === Serving from 'C:\Users\Keji's Lab\git GroupTwo'...
+[info] === Deploying to 'cashier-queing-system'...
 [info] 
-[debug] [2018-04-04T15:22:59.165Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/cashier-queing-system  
+[info] i  deploying hosting
+[info] i  hosting: preparing public directory for upload...
+[debug] [2018-04-06T05:26:24.448Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/cashier-queing-system/uploads/-L9OPs0ASL5ghJTHnz7s?fileCount=280&message=  
   
- Wed Apr 04 2018 23:22:59 GMT+0800 (Malay Peninsula Standard Time)
-[debug] [2018-04-04T15:23:04.219Z] <<< HTTP RESPONSE 200
-[debug] [2018-04-04T15:23:04.221Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/654094023765/clients/_:getWebAppConfig  
-  
- Wed Apr 04 2018 23:23:04 GMT+0800 (Malay Peninsula Standard Time)
-[debug] [2018-04-04T15:25:58.366Z] Error: read ECONNRESET
-    at exports._errnoException (util.js:1018:11)
-    at TLSWrap.onread (net.js:568:26)
-[error] 
-[error] Error: Server Error. read ECONNRESET
-[debug] [2018-04-04T15:32:11.279Z] ----------------------------------------------------------------------
-[debug] [2018-04-04T15:32:11.281Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Keji's Lab\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] [2018-04-04T15:32:11.282Z] CLI Version:   3.16.0
-[debug] [2018-04-04T15:32:11.282Z] Platform:      win32
-[debug] [2018-04-04T15:32:11.282Z] Node Version:  v6.10.3
-[debug] [2018-04-04T15:32:11.282Z] Time:          Wed Apr 04 2018 23:32:11 GMT+0800 (Malay Peninsula Standard Time)
-[debug] [2018-04-04T15:32:11.282Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2018-04-04T15:32:11.299Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-04-04T15:32:11.300Z] > authorizing via signed-in user
-[debug] [2018-04-04T15:32:11.305Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/cashier-queing-system  
-  
- Wed Apr 04 2018 23:32:11 GMT+0800 (Malay Peninsula Standard Time)
-[debug] [2018-04-04T15:32:34.105Z] Error: getaddrinfo ENOTFOUND admin.firebase.com admin.firebase.com:443
-    at errnoException (dns.js:28:10)
-    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:76:26)
-[error] 
-[error] Error: Server Error. getaddrinfo ENOTFOUND admin.firebase.com admin.firebase.com:443
-[debug] [2018-04-04T15:33:07.993Z] ----------------------------------------------------------------------
-[debug] [2018-04-04T15:33:07.996Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Keji's Lab\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] [2018-04-04T15:33:07.996Z] CLI Version:   3.16.0
-[debug] [2018-04-04T15:33:07.996Z] Platform:      win32
-[debug] [2018-04-04T15:33:07.997Z] Node Version:  v6.10.3
-[debug] [2018-04-04T15:33:07.997Z] Time:          Wed Apr 04 2018 23:33:07 GMT+0800 (Malay Peninsula Standard Time)
-[debug] [2018-04-04T15:33:07.997Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2018-04-04T15:33:08.014Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-04-04T15:33:08.015Z] > authorizing via signed-in user
-[debug] [2018-04-04T15:33:08.019Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/cashier-queing-system  
-  
- Wed Apr 04 2018 23:33:08 GMT+0800 (Malay Peninsula Standard Time)
-[debug] [2018-04-04T15:33:12.998Z] <<< HTTP RESPONSE 200
-[debug] [2018-04-04T15:33:12.999Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/cashier-queing-system/tokens  
-  
- Wed Apr 04 2018 23:33:12 GMT+0800 (Malay Peninsula Standard Time)
-[debug] [2018-04-04T15:33:16.290Z] <<< HTTP RESPONSE 200
-[info] 
-[info] === Serving from 'C:\Users\Keji's Lab\git GroupTwo'...
-[info] 
-[debug] [2018-04-04T15:33:16.294Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/cashier-queing-system  
-  
- Wed Apr 04 2018 23:33:16 GMT+0800 (Malay Peninsula Standard Time)
-[debug] [2018-04-04T15:33:21.962Z] <<< HTTP RESPONSE 200
-[debug] [2018-04-04T15:33:21.963Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/654094023765/clients/_:getWebAppConfig  
-  
- Wed Apr 04 2018 23:33:21 GMT+0800 (Malay Peninsula Standard Time)
-[debug] [2018-04-04T15:33:24.819Z] <<< HTTP RESPONSE 200
-[info] i  hosting: Serving hosting files from: public
-[info] +  hosting: Local server: http://localhost:5000
-
+ Fri Apr 06 2018 13:26:24 GMT+0800 (Malay Peninsula Standard Time)

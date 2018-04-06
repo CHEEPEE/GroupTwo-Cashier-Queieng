@@ -2,70 +2,30 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+    <style type="text/css">
+      body{
+       background-image: url("images/sacvirtual.png");
+      }
+      .cashier-number{
+        
+        text-align: center;
+        font-size: 15em !important;
+      }
+      .header{
+        text-align: center;
+      }
+      .maroonbackground{
+        height: 100vh;
+        position: fixed;
+        background-color: red;
+        z-index: 10px;
+      }
+
+    </style>
     <script
       src="js/jquery-3.2.1.min.js"></script>
     <script src="semantic/semantic.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <style type="text/css">
-      
-      .native-margin{
-
-  margin: 20px;
-}
-.native-padding{
-  padding: 50px;
-}
-.cashier-number{
-font-size:18em;
-text-align:center;
-border-style: solid;
-border-width: 5px;
-border-color:#B1252B;
-}
-
-.header-custom{
-  padding: 10px;
-  background-color: #B1252B;
-}
-.customlogin{
-  padding-top: 5%;
-}
-
-.ui image{
-  width: 500px;
-  height: 50px;
-  margin: 10px;
-}
-.loginform{
-margin: 100px;
-}
-.maroon{
-  background-color: #B1252B;
-}
-
-.header{
-    text-align: center;
-}
-
-.content{
-    color: white;
-}
-
-.content1{
-    color: white;
-    text-align: center;
-}
-.footer{
-    
-    padding: 10px;
-    background-color: #B1252B;
-    width: 100;
-    margin-top: 16vh;
-    height: 5vh;
-    color: white;
-    text-align: center;
-}
-    </style>
 
 
     </script>
@@ -75,16 +35,14 @@ margin: 100px;
   <body>
   <div class="header-custom">
     <h2 class="ui header">
-      <img src="images/log0.png" style="width:80px;height:80px;">
+      <img class="ui image" src="images/log0.png">
       <div class="content">
-        St. Anthony's College 
-            <div class="content1"> San Jose, Antique</div>
+       <h3> St. Anthony's College</h3>
+        <p>San Jose Antique</p>
       </div>
-     
     </h2>
   </div>
-
-
+  <div class="maroonbackground"></div>
 
 
 <div class="ui horizontal divider"></div>
@@ -92,7 +50,7 @@ margin: 100px;
     <div class="ui grid segment">
       <div class="three column row">
          <div class="column">
-            <h1 class="ui header">Window 1</h1>
+           <h1 class="ui header">Window 1</h1>
             <div class="ui clearing divider"></div>
            <p id="cashier-number1" class="cashier-number">0
            </p>
@@ -112,8 +70,6 @@ margin: 100px;
        </div>
       </div>
     </div>
-    
-    
   
 
 
@@ -129,12 +85,5 @@ margin: 100px;
     <script type="text/javascript">
 
     </script>
-    <div class="footer">
-
-        <p>Copyright © 2018 &nbsp;
-            All Rights Reserved.</p>
-      
-      
-    </div>
   </body>
 </html>
